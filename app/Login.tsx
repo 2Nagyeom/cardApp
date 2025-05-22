@@ -1,3 +1,4 @@
+import { router } from "expo-router";
 import React from "react";
 import { Dimensions, Image, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
@@ -29,7 +30,9 @@ export default function Splash() {
                 </TouchableOpacity>
             </View>
             <View style={styles.loginContainer}>
-                <TouchableOpacity style={styles.loginBtn}>
+                <TouchableOpacity 
+                    style={styles.loginBtn}
+                    onPress={() => router.push('/(tabs)/Home')}>
                     <Text style={{ textAlign: 'center', color: '#10375C', fontWeight: '600', fontSize: 24 }}>LOGIN</Text>
                 </TouchableOpacity>
                 <View style={styles.otherLoginLine}>

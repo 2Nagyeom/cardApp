@@ -1,10 +1,9 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-import { Platform } from 'react-native';
+import { Image, Platform, View } from 'react-native';
 
 import { HapticTab } from '@/components/HapticTab';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 
@@ -17,27 +16,40 @@ export default function TabLayout() {
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
         tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
-        tabBarStyle: Platform.select({
-          ios: {
-            // Use a transparent background on iOS to show the blur effect
-            position: 'absolute',
-          },
-          default: {},
-        }),
+        tabBarStyle: {
+          position: Platform.OS === 'ios' ? 'absolute' : 'relative',
+          borderColor : '#A2D2FF',
+          alignItems : 'center',
+        },
+        tabBarIconStyle : {
+          marginTop : 8,
+        },
+        tabBarLabelStyle : {
+          marginTop : 4,
+        }
       }}>
       <Tabs.Screen
-        name="home"
+        name="Home"
         options={{
           title: 'Home',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="Camera"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Camera',
+          tabBarIcon: ({}) => 
+          <View style={{ justifyContent : 'center', alignItems : 'center', width : 80, height : 80, borderRadius : 50, backgroundColor : '#BFD7EA'}}>
+            <Image source={require('@/assets/icons/tab_cameraIcon.png')} style={{ alignSelf: 'center', width : 64, height : 64, marginVertical : 4}} />
+          </View>
+        }}
+      />
+      <Tabs.Screen
+        name="Profile"
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.2.circle.fill" color={color} />,
         }}
       />
     </Tabs>
