@@ -18,6 +18,8 @@ const MAPPING = {
   'house.fill': 'home',
   'person.2.circle.fill' : 'meho',
   'magnifyingglass': 'search1',
+  'arrow.backward.to.line' : 'arrowright',
+  'chevron.right' : 'right'
 } as IconMapping;
 
 /**
