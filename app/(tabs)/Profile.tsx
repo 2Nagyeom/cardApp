@@ -28,7 +28,6 @@ export default function Profile() {
             {section.title}
           </Text>
         )}
-
         renderItem={({ item }) => (
           <View style={{ paddingHorizontal: 20 }}>
             <TouchableOpacity
