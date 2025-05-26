@@ -1,5 +1,6 @@
 import { HeaderBar } from '@/components/ui/HeaderBar';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import { router } from 'expo-router';
 import React from 'react';
 import { FlatList, Image, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
@@ -9,7 +10,7 @@ type CateSection = {
 }
 
 type cateItem = {
-    label : String;
+    label : string;
     img : any;
     style : any;
     onPress : () => void;
@@ -21,7 +22,8 @@ export default function TabTwoScreen() {
             <HeaderBar
                 title="CardLab"
                 rightButton={{
-                    child : <IconSymbol size={24} name={'magnifyingglass'} color={'#1A1A2E'} />
+                    child : <IconSymbol size={24} name={'magnifyingglass'} color={'#1A1A2E'} />,
+                    onPress : () => router.push('/Search')
                 }}
                 leftButton={{
                     child : <Image source={require('@/assets/icons/cardLabIcon.png')} style={{width : 44, height :44}} />

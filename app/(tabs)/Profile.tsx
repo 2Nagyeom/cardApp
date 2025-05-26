@@ -7,7 +7,7 @@ type MenuSection = {
   data: MemuItem[];
 }
 type MemuItem = {
-  label: String;
+  label: string;
   onPress: () => void;
 }
 

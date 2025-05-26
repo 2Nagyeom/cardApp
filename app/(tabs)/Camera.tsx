@@ -2,6 +2,7 @@ import { Image, SafeAreaView, StyleSheet } from 'react-native';
 
 import { HeaderBar } from '@/components/ui/HeaderBar';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import { router } from 'expo-router';
 
 export default function TabTwoScreen() {
     return (
@@ -9,7 +10,8 @@ export default function TabTwoScreen() {
             <HeaderBar
                 title="CardLab"
                 rightButton={{
-                    child : <IconSymbol size={24} name={'magnifyingglass'} color={'#1A1A2E'} />
+                    child : <IconSymbol size={24} name={'magnifyingglass'} color={'#1A1A2E'} />,
+                    onPress : () => router.push('/Result')
                 }}
                 leftButton={{
                     child : <Image source={require('@/assets/icons/cardLabIcon.png')} style={{width : 44, height :44}} />
