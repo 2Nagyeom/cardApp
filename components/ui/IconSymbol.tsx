@@ -19,7 +19,9 @@ const MAPPING = {
   'person.2.circle.fill' : 'meho',
   'magnifyingglass': 'search1',
   'arrow.backward.to.line' : 'arrowright',
-  'chevron.right' : 'right'
+  'chevron.right' : 'right',
+  'chevron.left' : 'arrowleft',
+  'xmark' : 'close'
 } as IconMapping;
 
 /**

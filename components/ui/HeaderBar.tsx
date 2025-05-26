@@ -1,5 +1,5 @@
 import React, { JSX } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
 type HeaderButton = {
     child: JSX.Element;
@@ -21,7 +21,11 @@ export const HeaderBar = ({ title, leftButton, rightButton, style }: Props) => (
                     {leftButton.child}
                 </TouchableOpacity>
             )}
-            {title && <Text style={styles.title}>{title}</Text>}
+            {title ? <Text style={styles.title}>{title}</Text> 
+                : <TextInput 
+                    placeholder="Please enter your card name" 
+                    placeholderTextColor={'#A2D2FF'}
+                    style={styles.inputText}/>}
         </View>
         <View style={styles.rightContainer}>
             {rightButton && (
@@ -62,6 +66,12 @@ const styles = StyleSheet.create({
     title: { 
         fontSize: 30, 
         fontWeight: 'bold', 
-        color: '#1A1A2E' 
+        color: '#000' 
     },
+    inputText : {
+        color : '#1A1A2E',
+        fontSize : 16,
+        fontWeight : '500',
+        marginLeft : 12
+    }
 });
