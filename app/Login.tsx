@@ -4,10 +4,9 @@ import { Dimensions, Image, SafeAreaView, StyleSheet, Text, TextInput, Touchable
 
 
 const { width, height } = Dimensions.get('window')
-export default function Splash() {
+export default function Login() {
 
     // expo-router에서는 페이지 이동(네비게이션)을 위해 반드시 useRouter 훅을 사용해야 합니다:
-
     return (
         <SafeAreaView style={styles.bgContainer}>
             <View style={styles.imgContainer}>
@@ -32,7 +31,11 @@ export default function Splash() {
             <View style={styles.loginContainer}>
                 <TouchableOpacity 
                     style={styles.loginBtn}
-                    onPress={() => router.push('/(tabs)/Home')}>
+                    onPress={() => 
+                            (console.log('touch!'))
+                        // router.push('/(tabs)/Home')
+                        
+                    }>
                     <Text style={{ textAlign: 'center', color: '#10375C', fontWeight: '600', fontSize: 24 }}>LOGIN</Text>
                 </TouchableOpacity>
                 <View style={styles.otherLoginLine}>
@@ -51,9 +54,12 @@ export default function Splash() {
                     </TouchableOpacity>
                 </View>
             </View>
-            <View style={{ marginTop : 'auto' }}>
-                <TouchableOpacity>
-                    <Text style={{ textAlign: 'center', color: '#1A1A2E', fontWeight: '500', fontSize: 14 }}>Are you a new user? Sign up</Text>
+            <View style={{ marginTop : 'auto', flex : 1, justifyContent : 'center'}}>
+                <TouchableOpacity
+                    style={{ alignItems : 'center'}} 
+                    onPress={() => router.push('/Sign')
+                }>
+                    <Text style={{color: '#1A1A2E', fontWeight: '500', fontSize: 14 }}>Are you a new user? Sign up</Text>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>
