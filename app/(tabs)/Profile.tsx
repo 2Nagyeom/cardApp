@@ -23,6 +23,8 @@ export default function Profile() {
         showsVerticalScrollIndicator={false}
         sections={sections}
         keyExtractor={(item) => item.label}
+        // sectionHeader 가 고정되고 있기 때문에 속성추가
+        stickySectionHeadersEnabled={false}
         renderSectionHeader={({ section }) => (
           <Text style={{ color: '#BFD7EA', paddingHorizontal: 20, marginVertical : 4, fontWeight : '500', fontSize: 14 }}>
             {section.title}
