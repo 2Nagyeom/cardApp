@@ -21,7 +21,7 @@ export const HeaderBar = ({ title, leftButton, rightButton, style }: Props) => (
                     {leftButton.child}
                 </TouchableOpacity>
             )}
-            {title ? <Text style={styles.title}>{title}</Text> 
+            {title ? <Text style={[styles.title, style]}>{title}</Text> 
                 : <TextInput 
                     placeholder="Please enter your card name" 
                     placeholderTextColor={'#A2D2FF'}
