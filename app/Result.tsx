@@ -20,7 +20,7 @@ export default function Reseult() {
             <HeaderBar
                 style={{ borderBottomColor: '#000', color: '#fff' }}
                 leftButton={{
-                    child: <IconSymbol size={24} name={'chevron.left'} color={"#A2D2FF"} />,
+                    child: <IconSymbol size={24} name={'chevron.left'} color={"#1A1A2E"} />,
                     onPress: () => router.push('/(tabs)/Camera')
                 }}
                 title={'.'}
@@ -28,10 +28,12 @@ export default function Reseult() {
             <LinearGradient colors={["#1A1A2E", "#000"]} style={{ flex: 1, left: 0, right: 0, top: 0 }}>
                 <View style={styles.imageContainer}>
                     <Image source={require('@/assets/cards/OP01-120.png')} style={{marginTop : 44, width: width*0.92, height: height*0.6, borderRadius: 8 }} />
-                    <View style={styles.imageTextView}>
+                    <TouchableOpacity
+                        style={styles.imageTextView}
+                        onPress={() => router.push('/Info')}>
                         <Text style={{ fontSize: 18, fontWeight: '600', color: '#10375C' }}>Shank manga</Text>
                         <Text style={{ fontWeight: '500', color: '#10375C' }}>from Onepiece OP01</Text>
-                    </View>
+                    </TouchableOpacity>
                     <TouchableOpacity onPress={() => bottomSheetRef.current?.snapToIndex(1)}>
                         <Text style={styles.questionText}>Isn't this the card?</Text>
                     </TouchableOpacity>
@@ -53,7 +55,8 @@ export default function Reseult() {
                         showsVerticalScrollIndicator={false}
                         columnWrapperStyle={{ justifyContent: 'space-between' }}
                         renderItem={({ item }) => (
-                            <TouchableOpacity style={{ alignItems: 'center', marginBottom: 24 }}>
+                            <TouchableOpacity 
+                                style={{ alignItems: 'center', marginBottom: 24 }}>
                                 <Image source={item.src} style={{ width: 168, height: 230, borderRadius: 8 }} />
                             </TouchableOpacity>
                         )}
@@ -73,10 +76,8 @@ const images = [
 
 const styles = StyleSheet.create({
     imageContainer: {
-        // width: width,
         height: height,
         flex : 1,
-        // justifyContent: 'center',
         alignItems: 'center',
         gap: 20,
     },
