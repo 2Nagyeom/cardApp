@@ -21,7 +21,10 @@ const MAPPING = {
   'arrow.backward.to.line' : 'arrowright',
   'chevron.right' : 'right',
   'chevron.left' : 'arrowleft',
-  'xmark' : 'close'
+  'xmark' : 'close',
+  'bookmark' : 'book',
+  'bookmark.fill' : 'book',
+  'triangle.fill' : 'up',
 } as IconMapping;
 
 /**

@@ -76,10 +76,10 @@ const sections : CateSection[] = [
     {
         title : 'New Card release!',
         data : [
-            {label : 'Zoro Leader Pereal', img : require('@/assets/cards/OP01-001.png'), style : { width : 140, height : 200, borderRadius : 10 }, onPress : () => {}},
-            {label : 'Low Leader Pereal', img : require('@/assets/cards/OP01-002.png'), style : { width : 140, height : 200, borderRadius : 10 }, onPress : () => {}},
-            {label : 'Loopy Leader Pereal', img : require('@/assets/cards/OP01-003.png'), style : { width : 140, height : 200, borderRadius : 10 }, onPress : () => {}},
-            {label : 'Doplamingo Leader Pereal', img : require('@/assets/cards/OP01-060.png'), style : { width : 140, height : 200, borderRadius : 10 }, onPress : () => {}},
+            {label : 'Zoro Leader Pereal', img : require('@/assets/cards/OP01-001.png'), style : { width : 140, height : 200, borderRadius : 10 }, onPress : () => {router.push('/Info')}},
+            {label : 'Low Leader Pereal', img : require('@/assets/cards/OP01-002.png'), style : { width : 140, height : 200, borderRadius : 10 }, onPress : () => {router.push('/Info')}},
+            {label : 'Loopy Leader Pereal', img : require('@/assets/cards/OP01-003.png'), style : { width : 140, height : 200, borderRadius : 10 }, onPress : () => {router.push('/Info')}},
+            {label : 'Doplamingo Leader Pereal', img : require('@/assets/cards/OP01-060.png'), style : { width : 140, height : 200, borderRadius : 10 }, onPress : () => {router.push('/Info')}},
         ]
     },
     {
