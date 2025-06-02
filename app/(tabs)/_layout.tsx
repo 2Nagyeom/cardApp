@@ -38,9 +38,9 @@ export default function TabLayout() {
       <Tabs.Screen
         name="Camera"
         options={{
-          title: 'Camera',
+          title: '',
           tabBarIcon: ({}) => 
-          <View style={{ justifyContent : 'center', alignItems : 'center', width : 80, height : 80, borderRadius : 50, backgroundColor : '#BFD7EA'}}>
+          <View style={{ justifyContent : 'center', alignItems : 'center', marginBottom : 20, width : 90, height : 90, borderRadius : 50, backgroundColor : '#10375C'}}>
             <Image source={require('@/assets/icons/tab_cameraIcon.png')} style={{ alignSelf: 'center', width : 64, height : 64, marginVertical : 4}} />
           </View>
         }}
