@@ -2,7 +2,7 @@ import CardPriceChart from "@/components/CardPriceChart";
 import { HeaderBar } from "@/components/ui/HeaderBar";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { router } from "expo-router";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Dimensions, Image, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const { width, height } = Dimensions.get('window');
