@@ -25,6 +25,8 @@ const MAPPING = {
   'bookmark' : 'book',
   'bookmark.fill' : 'book',
   'triangle.fill' : 'up',
+  'chevron.down.circle' : 'downcircleo',
+  'chevron.down.circle.fill' : 'downcircle'
 } as IconMapping;
 
 /**

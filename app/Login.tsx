@@ -1,5 +1,4 @@
 import { router } from "expo-router";
-import React from "react";
 import { Dimensions, Image, Keyboard, KeyboardAvoidingView, Platform, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, TouchableWithoutFeedback, View } from "react-native";
 
 
@@ -10,7 +9,7 @@ export default function Login() {
     return (
         <SafeAreaView style={styles.bgContainer}>
             <View style={styles.imgContainer}>
-                <Image source={require('@/assets/icons/cardLabIcon.png')} style={{ marginVertical: 24, alignSelf: 'center', width: 180, height: 180 }} />
+                <Image source={require('@/assets/icons/cardLabIcon.png')} style={{ marginTop : 24, alignSelf: 'center', width: 180, height: 180 }} />
                 <Text style={{ textAlign: 'center', color: '#10375C', fontWeight: '700' }}>A place where you know the market price of all the cards in the world</Text>
             </View>
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
@@ -41,7 +40,7 @@ export default function Login() {
                     onPress={() => router.push('/(tabs)/Home')}>
                     <Text style={{ textAlign: 'center', color: '#10375C', fontWeight: '600', fontSize: 24 }}>LOGIN</Text>
                 </TouchableOpacity>
-                <View style={{ marginTop: height * 0.1, gap: 12 }}>
+                {/* <View style={{ marginTop: height * 0.1, gap: 12 }}>
                     <View style={styles.otherLoginLine}>
                         <View style={{ flex: 1, height: 2, backgroundColor: '#1A1A2E' }} />
                         <Text style={{ textAlign: 'center', color: '#1A1A2E', fontWeight: '500', fontSize: 16 }}>other login</Text>
@@ -57,9 +56,9 @@ export default function Login() {
                             <Text style={{ fontWeight: '600' }}>Go to Google</Text>
                         </TouchableOpacity>
                     </View>
-                </View>
+                </View> */}
             </View>
-            <View style={{ marginTop: 'auto', height: height * 0.04, justifyContent: 'flex-start' }}>
+            <View style={{ marginTop: 'auto', marginBottom : 8, height: height * 0.04, justifyContent: 'flex-start' }}>
                 <TouchableOpacity
                     style={{ alignItems: 'center' }}
                     onPress={() => router.push('/Sign')
@@ -79,13 +78,13 @@ const styles = StyleSheet.create({
 
     },
     imgContainer: {
-        gap: 18,
+        marginVertical : 32,
         alignItems: 'center',
-        marginHorizontal: 24
     },
     inputContainer: {
-        marginTop: 24,
-        gap: 12
+        flex : 1,
+        gap: 12,
+        marginVertical : 16,
     },
     inputBar: {
         width: width - 48,
@@ -96,6 +95,8 @@ const styles = StyleSheet.create({
     },
     loginContainer: {
         flex: 1,
+        justifyContent : 'flex-end',
+        marginBottom : 32,
     },
     loginBtn: {
         width: width - 48,

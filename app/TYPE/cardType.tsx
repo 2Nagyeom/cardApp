@@ -10,3 +10,4 @@ export type Card = {
     "product" : String,
     "productName" : String
 }
+

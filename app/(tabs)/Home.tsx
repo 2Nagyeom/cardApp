@@ -73,7 +73,7 @@ export default function TabTwoScreen() {
                         </View>
                     ))
                 }
-                {
+                {/* {
                     newCards.length > 0 && (
                         <View style={{ marginTop: 16, gap: 16 }}>
                             <Text style={[styles.mainText, { paddingHorizontal: 20 }]}>New Card release!</Text>
@@ -100,14 +100,14 @@ export default function TabTwoScreen() {
                                             style={{ width: 150, height: 210, borderRadius: 10 }}
                                         />
                                         <Text style={styles.itemText}>{item.cardName}</Text>
-                                        {/* <Text style={[styles.itemText, { fontSize: 14, color: '#555' }]}>₩{item.cardPrice}</Text> */}
+                                        {/* <Text style={[styles.itemText, { fontSize: 14, color: '#555' }]}>₩{item.cardPrice}</Text> 
                                     </TouchableOpacity>
                                 )}
                             />
                             <View style={styles.splitContainer} />
                         </View>
                     )
-                }
+                } */}
             </ScrollView>
         </SafeAreaView>
     );
@@ -122,15 +122,15 @@ const sections: CateSection[] = [
             { label: 'Digimon', img: require('@/assets/images/catePoket.png'), style: { width: 84, height: 84, borderRadius: 24 }, onPress: () => { } },
         ]
     },
-    // {
-    //     title: 'New Card release!',
-    //     data: [
-    //         { label: 'Zoro Leader Pereal', img: require('@/assets/cards/OP01-001.png'), style: { width: 140, height: 200, borderRadius: 10 }, onPress: () => { router.push('/Info') } },
-    //         { label: 'Low Leader Pereal', img: require('@/assets/cards/OP01-002.png'), style: { width: 140, height: 200, borderRadius: 10 }, onPress: () => { router.push('/Info') } },
-    //         { label: 'Loopy Leader Pereal', img: require('@/assets/cards/OP01-003.png'), style: { width: 140, height: 200, borderRadius: 10 }, onPress: () => { router.push('/Info') } },
-    //         { label: 'Doplamingo Leader Pereal', img: require('@/assets/cards/OP01-060.png'), style: { width: 140, height: 200, borderRadius: 10 }, onPress: () => { router.push('/Info') } },
-    //     ]
-    // },
+    {
+        title: 'New Card release!',
+        data: [
+            { label: 'Zoro Leader Pereal', img: require('@/assets/cards/OP01-001.png'), style: { width: 130, height: 180, borderRadius: 8 }, onPress: () => { router.push('/Info') } },
+            { label: 'Low Leader Pereal', img: require('@/assets/cards/OP01-002.png'), style: { width: 130, height: 180, borderRadius: 8 }, onPress: () => { router.push('/Info') } },
+            { label: 'Loopy Leader Pereal', img: require('@/assets/cards/OP01-003.png'), style: { width: 130, height: 180, borderRadius: 8 }, onPress: () => { router.push('/Info') } },
+            { label: 'Doplamingo Leader Pereal', img: require('@/assets/cards/OP01-060.png'), style: { width: 130, height: 180, borderRadius: 8 }, onPress: () => { router.push('/Info') } },
+        ]
+    },
     {
         title: 'Recommend for you',
         data: [
